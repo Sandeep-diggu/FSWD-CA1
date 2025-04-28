@@ -1,16 +1,19 @@
-// TestimonialCard.jsx
 import React from 'react';
-import PropTypes from 'prop-types';
-import './TestimonialCard.jsx';
+import TestimonialCard from './components/TestimonialCard';
 
-function TestimonialCard({ name, review, image }) {
+function App() {
   return (
-    <div className="testimonial-card">
-      <img src={image} alt={`${name}'s avatar`} className="testimonial-image" />
-      <h3>{name}</h3>
-      <p>{review}</p>
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center gap-6 p-8">
+      <TestimonialCard 
+        name="Emily Watson" 
+        review="This service was amazing! Highly recommended." 
+      />
+      <TestimonialCard 
+        name="James Anderson" 
+        review="Fantastic experience — would definitely come back again!" 
+      />
     </div>
   );
 }
 
-export default TestimonialCard;
+export default App;
